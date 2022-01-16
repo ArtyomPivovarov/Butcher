@@ -1,0 +1,44 @@
+{
+  "name": "butcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artem Pivovarov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-object-assign": "^7.16.5",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/runtime": "^7.16.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.27.7",
+    "clean-webpack-plugin": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-if": "^3.0.0",
+    "gulp-open": "^3.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.4",
+    "terser-webpack-plugin": "^5.3.0",
+    "webpack": "^5.64.4",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "ymaps": "^0.2.1"
+  }
+}

@@ -1,0 +1,56 @@
+@import "vars";
+
+/* open-sans-300 - latin_cyrillic */
+@font-face {
+    font-family: $fnOpenSans;
+    font-style: normal;
+    font-weight: $fLight;
+    src: local(''),
+    url('../fonts/open-sans-v27-latin_cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/open-sans-v27-latin_cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* open-sans-regular - latin_cyrillic */
+@font-face {
+    font-family: $fnOpenSans;
+    font-style: normal;
+    font-weight: $fRegular;
+    src: local(''),
+    url('../fonts/open-sans-v27-latin_cyrillic-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/open-sans-v27-latin_cyrillic-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* open-sans-800 - latin_cyrillic */
+@font-face {
+    font-family: $fnOpenSans;
+    font-style: normal;
+    font-weight: $fBold;
+    src: local(''),
+    url('../fonts/open-sans-v27-latin_cyrillic-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/open-sans-v27-latin_cyrillic-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: $fnRoboto;
+    font-style: normal;
+    font-weight: $fMedium;
+    src: local(''),
+    url('../fonts/Roboto-Medium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/Roboto-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: $fnRoboto;
+    font-style: normal;
+    font-weight: $fBold;
+    src: local(''),
+    url('../fonts/Roboto-Bold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/Roboto-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: $fnAmazingGrotesk;
+    font-style: normal;
+    font-weight: $fUltra;
+    src: local(''),
+    url('../fonts/AmazingGrotesk-Ultra.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('../fonts/AmazingGrotesk-Ultra.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}

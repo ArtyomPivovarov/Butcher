@@ -1,0 +1,17 @@
+.list {
+    &__item {
+        position: relative;
+        padding-left: .5em;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.4em;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: currentColor;
+        }
+    }
+}

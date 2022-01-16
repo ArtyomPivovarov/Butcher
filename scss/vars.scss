@@ -1,0 +1,59 @@
+@import 'mixins';
+@import "functions";
+
+// Fonts
+$fLight: 300;
+$fRegular: 400;
+$fMedium: 500;
+$fBold: 800;
+$fUltra: 900;
+
+$fnOpenSans: 'Open Sans';
+$fnRoboto: 'Roboto';
+$fnAmazingGrotesk: 'AmazingGrotesk';
+
+$fStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+$fOpenSans: $fnOpenSans, $fStack;
+$fRoboto: $fnRoboto, $fStack;
+$fAmazingGrotesk: $fnAmazingGrotesk, $fStack;
+
+// Colors
+$cRed: #A03233;
+$cDarkRed: #771F20;
+
+$cWhite: #fff;
+$cGainsboro: #E8E8E8;
+$cWhiteSmoke: #F8F8F8;
+
+$cBlack: #000;
+$cNero: #1C1C1C;
+$cDarkGrey: #333;
+$cEclipse: #3A3A3A;
+$cDimGray: #5F5F5F;
+$cNobel: #9B9B9B;
+
+// Breakpoints
+$xxl: 1920px;
+$xl: 1400px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 568px;
+$xxs: 360px;
+
+$mXxl: '(max-width: #{$xxl - 1})';
+$mXl: '(max-width: #{$xl - 1})';
+$mLg: '(max-width: #{$lg - 1})';
+$mMd: '(max-width: #{$md - 1})';
+$mSm: '(max-width: #{$sm - 1})';
+$mXs: '(max-width: #{$xs - 1})';
+$mXxs: '(max-width: #{$xxs - 1})';
+
+$mMoreXxl: '(min-width: #{$xxl})';
+$mMoreXl: '(min-width: #{$xl})';
+$mMoreLg: '(min-width: #{$lg})';
+$mMoreMd: '(min-width: #{$md})';
+$mMoreSm: '(min-width: #{$sm})';
+$mMoreXs: '(min-width: #{$xs})';
+$mMoreXxs: '(min-width: #{$xxs})';
+

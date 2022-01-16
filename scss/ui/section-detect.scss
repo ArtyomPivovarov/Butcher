@@ -1,0 +1,43 @@
+@import '../vars';
+
+.section-detect {
+    @include transit(opacity);
+    position: fixed;
+    left: 25px;
+    top: 328px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+
+    @media #{$mSm} {
+        display: none;
+    }
+
+    &--hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__item {
+        @include transit('border-color, background-color');
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 50%;
+        background-color: $cWhite;
+        border: 2px solid $cWhite;
+        cursor: pointer;
+
+        &--active {
+            border-color: $cRed;
+            background-color: transparent;
+            cursor: default;
+            pointer-events: none;
+
+            &.section-detect__item--black {
+                border-color: $cNero;
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+@import "../vars";
+
+.about-page {
+    @media #{$mSm} {
+        background: url('../images/desks-bg.jpg') repeat-y;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding-bottom: calc-rem(128);
+        background: center/cover url('../images/desks-bg.jpg');
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+
+            @media #{$mSm} {
+                display: none;
+            }
+        }
+
+        &-inner {
+            position: relative;
+        }
+
+        @media #{$mSm} {
+            background: transparent;
+        }
+    }
+
+    &__description {
+        display: flex;
+        gap: 6%;
+        padding: calc-rem(186) 0 calc-rem(200);
+
+        @media #{$mSm} {
+            padding: 56px 0 78px;
+            flex-direction: column;
+            gap: 43px;
+        }
+
+        &-picture {
+            @include propotional-size(calc(372 / 390));
+            flex: 0 0 28%;
+            min-width: 335px;
+            max-width: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 27.0219px 20.2664px rgba(0, 0, 0, 0.25), 0px 0px 39.9624px 5.10158px rgba(0, 0, 0, 0.25);
+
+            @media #{$mSm} {
+                margin: 0 auto;
+            }
+        }
+
+        &-text {
+            flex-grow: 1;
+            font-size: calc-rem(19);
+            padding-top: 1em;
+
+            @media #{$mSm} {
+                order: -1;
+                font-size: 16px;
+                line-height: calc(27 / 16);
+            }
+
+            strong {
+                font-size: calc-rem(23);
+
+                @media #{$mSm} {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &__delimeter {
+        @include propotional-size(calc(277 / 1637));
+        margin-left: calc(-1 * ((100vw - var(--wContent)) / 2 + var(--gContent)));
+        margin-bottom: calc-rem(144);
+        width: 117%;
+
+        @media (max-width: 1700px) {
+            width: 90%;
+        }
+
+        @media (max-width: 1530px) {
+            margin-left: calc(-1 * var(--gContent));
+        }
+
+        @media #{$mSm} {
+            display: none;
+        }
+    }
+
+    &__stage {
+        &:not(:last-child) {
+            margin-bottom: calc-rem(124);
+
+            @media #{$mSm} {
+                margin-bottom: 67px;
+            }
+        }
+
+        &-title {
+            display: flex;
+            align-items: center;
+            gap: .4em;
+            max-width: 1070px;
+            margin: 0 0 calc-rem(80);
+            font-size: calc-rem(62);
+            line-height: 1;
+            font-family: $fAmazingGrotesk;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+
+            @media #{$mSm} {
+                margin-bottom: 40px;
+                color: $cRed;
+                letter-spacing: 0;
+                font-size: 33px;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                height: 4px;
+                background-color: $cRed;
+
+                @media #{$mSm} {
+                    height: 1px;
+                    background-color: $cWhite;
+                }
+            }
+
+            &:before {
+                width: 22%;
+
+                @media #{$mSm} {
+                    width: auto;
+                    flex-grow: 1;
+                }
+            }
+
+            &:after {
+                flex-grow: 1;
+            }
+        }
+
+        &-content {
+            display: flex;
+            gap: 6%;
+
+            @media #{$mSm} {
+                flex-direction: column;
+            }
+        }
+
+        &-picture {
+            @include propotional-size(calc(562 / 393));
+            flex: 0 0 28%;
+            align-self: flex-start;
+            border-radius: 15px;
+            box-shadow: 0 0 27.0219px 20.2664px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+
+            @media #{$mSm} {
+                height: 363px;
+                width: 100%;
+                max-width: 400px;
+                margin: 58px auto 0;
+            }
+        }
+
+        &-text {
+            font-size: calc-rem(20);
+            line-height: calc(42 / 20);
+
+            @media #{$mSm} {
+                order: -1;
+                font-size: 16px;
+                line-height: calc(27 / 16);
+            }
+        }
+    }
+}

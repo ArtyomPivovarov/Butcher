@@ -1,0 +1,36 @@
+@import "../../vars";
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-right: 16px;
+
+    @media #{$mMd} {
+        padding-right: 0;
+    }
+
+    @media #{$mSm} {
+        padding-left: 22px;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: calc-rem(69);
+
+        @media #{$mSm} {
+            gap: 50px;
+        }
+    }
+
+    &__map {
+        height: calc-rem(452);
+        width: 72%;
+
+        @media #{$mSm} {
+            display: none;
+        }
+    }
+}

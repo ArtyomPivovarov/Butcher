@@ -1,0 +1,51 @@
+@import "../../vars";
+
+.btn {
+    @include transit('background-color, border-color, color');
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2em;
+    border: 1.5px solid $cWhite;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: $fRoboto;
+    font-size: 1rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $cWhite;
+    cursor: pointer;
+
+    @media #{$mSm} {
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    @include hover {
+        background-color: $cRed;
+        border-color: $cRed;
+    }
+
+    &--white {
+        background-color: $cWhite;
+        color: $cDarkGrey;
+        border-radius: 0;
+
+        @include hover {
+            background-color: $cDarkGrey;
+            border-color: $cDarkGrey;
+            color: $cWhite;
+        }
+    }
+
+    &--red {
+        border-color: $cRed;
+        background-color: $cRed;
+
+        @include hover {
+            background-color: $cEclipse;
+        }
+    }
+}

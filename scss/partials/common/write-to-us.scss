@@ -1,0 +1,123 @@
+@import "../../vars";
+
+.write-to-us {
+    position: relative;
+    margin-top: -116px;
+    padding: 14.3% 0 14.6%;
+    background: center/cover no-repeat url("../images/brokens/write-to-us.svg");
+
+    &--footer {
+        background-image: url("../images/brokens/write-to-us-footer.svg");
+        padding-bottom: 214px;
+        z-index: 1;
+    }
+
+    @media #{$mSm} {
+        margin-top: 0;
+        padding: 38px 0 67px;
+        background: $cNero;
+    }
+
+    &__picture {
+        @include propotional-size(calc(922 / 860), contain);
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 45%;
+
+        @media (max-width: 1685px) {
+            width: 38%;
+        }
+
+        @media #{$mMd} {
+            width: 30%;
+        }
+
+        @media #{$mSm} {
+            display: none;
+        }
+    }
+
+    &__content {
+        width: 60.4%;
+        min-height: 400px;
+        margin: 0 -8.1% 0 auto;
+        color: $cDimGray;
+
+        @media (max-width: 1685px) {
+            margin: 0 0 0 auto;
+        }
+
+        @media #{$mMd} {
+            width: 74%;
+        }
+
+        @media #{$mSm} {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.3em;
+
+        @media #{$mXl} {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin: 0 1.6em 0 0;
+        font-size: calc-rem(42);
+        font-family: $fAmazingGrotesk;
+        font-weight: $fUltra;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+
+        @media #{$mSm} {
+            width: 100%;
+            margin: 0 0 44px;
+            text-align: center;
+            font-size: 33px;
+            color: $cRed;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: .2em;
+            right: -0.9em;
+            height: .9em;
+            width: 5px;
+            background-color: $cRed;
+            border-radius: 5px;
+
+            @media #{$mSm} {
+                display: none;
+            }
+        }
+    }
+
+    &__desc {
+        font-size: calc-rem(22);
+        line-height: calc(28 / 22);
+
+        @media #{$mSm} {
+            display: none;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 311px;
+        margin: 53px auto 0;
+
+        @media #{$mMoreSm} {
+            display: none;
+        }
+    }
+}

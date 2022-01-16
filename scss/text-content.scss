@@ -1,0 +1,44 @@
+@import 'vars';
+
+.text-content {
+    h2 {
+        margin: 0 0 1.4em;
+        font-size: calc-rem(26);
+        line-height: calc(32 / 26);
+        font-weight: $fRegular;
+
+        @media #{$mSm} {
+            font-size: 16px;
+            font-weight: $fBold;
+            color: $cRed;
+        }
+    }
+
+    p {
+        margin: 0 0 calc-rem(56);
+        font-size: calc-rem(17);
+        line-height: calc(32 / 17);
+
+        @media #{$mSm} {
+            font-size: 13px;
+            line-height: 2.05;
+        }
+    }
+
+    ul, ol {
+        margin: 0 0 calc-rem(75);
+        padding: 0 0 0 calc-rem(16);
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: calc-rem(12);
+        }
+    }
+
+    h2, p, ul {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

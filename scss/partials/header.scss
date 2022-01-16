@@ -1,0 +1,268 @@
+@import "../vars";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    &--nav-open {
+        .header__nav {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .header__burger {
+            color: $cNero;
+        }
+    }
+
+    &--dropdown-open {
+        .header__dropdown {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .header__burger {
+            color: $cRed;
+        }
+    }
+
+    &__container {
+        @media #{$mLg} {
+            padding: 0 20px;
+        }
+
+        @media #{$mSm} {
+            display: flex;
+            padding-top: 27px;
+        }
+    }
+
+    &__nav {
+        @include transit(opacity);
+        position: relative;
+        display: flex;
+        height: var(--hHeaderNav);
+
+        @media #{$mSm} {
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            gap: 34px;
+            padding: 118px 85px 118px 110px;
+            width: 100%;
+            min-height: max(100vh, 812px);
+            background-color: $cRed;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 1.5px;
+            width: 40%;
+            background-color: rgba(255, 255, 255, .2);
+        }
+
+        &:before {
+            left: calc(-1 * var(--gContent));
+
+            @media #{$mLg} {
+                left: -20px;
+            }
+        }
+
+        &:after {
+            width: 42%;
+            right: calc(-1 * var(--gContent));
+
+            @media #{$mLg} {
+                right: -20px;
+            }
+        }
+
+        &-item {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3%;
+
+            @media #{$mLg} {
+                padding: 0 2%;
+            }
+
+            @media #{$mSm} {
+                position: static;
+                justify-content: flex-start;
+                padding: 0;
+            }
+
+            @media #{$mMoreSm} {
+                &:hover {
+                    .header__dropdown {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                };
+            }
+        }
+
+        &-text {
+            text-transform: uppercase;
+            font-size: 1rem;
+            line-height: calc(24 / 16);
+            font-weight: $fBold;
+            color: $cWhite;
+            cursor: default;
+
+            @media #{$mSm} {
+                font-weight: $fRegular;
+                font-size: 29px;
+                text-transform: none;
+            }
+        }
+
+        &-link {
+            @include transit('border-bottom-color, color');
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            @include hover {
+                color: $cRed;
+                border-bottom-color: $cRed;
+            }
+        }
+
+    }
+
+    &__dropdown {
+        @include transit(opacity);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        right: 0;
+        top: 100%;
+        width: 290px;
+        background-color: $cWhiteSmoke;
+        padding: 1.6em 1.55em 2em;
+        border-radius: 20px;
+        font-family: $fRoboto;
+        font-size: calc-rem(24);
+        line-height: 1;
+        color: $cDarkGrey;
+        box-shadow: 0 4px 20px 16px rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        pointer-events: none;
+
+        @media #{$mSm} {
+            top: 0;
+            left: 0;
+            padding: 131px 78px 110px 93px;
+            width: 100%;
+            min-height: max(100vh, 812px);
+            background-color: $cNero;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: $cWhite;
+        }
+
+        @include hover {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        &-title {
+            margin-bottom: 1.4em;
+
+            @media #{$mSm} {
+                margin-bottom: 1.2em;
+                font-size: 24px;
+            }
+        }
+
+        &-item {
+            @include transit(color);
+            position: relative;
+            padding-left: 1em;
+            text-decoration: none;
+            color: currentColor;
+
+            @media #{$mSm} {
+                font-size: 24px;
+            }
+
+            @include hover {
+                color: $cRed;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1em;
+
+                @media #{$mSm} {
+                    margin-bottom: 1.9em;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: .3em;
+                width: .45em;
+                height: .45em;
+                border-radius: 50%;
+                background-color: $cRed;
+            }
+        }
+    }
+
+    &__logo {
+        @include propotional-size(calc(212 / 240));
+        display: block;
+        width: 18%;
+        margin: 0 auto -10%;
+        text-decoration: none;
+        color: currentColor;
+        cursor: pointer;
+
+        @media #{$mSm} {
+            display: none;
+        }
+    }
+
+    &__burger {
+        @include transit(color);
+        height: 22px;
+        width: 33px;
+        z-index: 1;
+        margin-left: auto;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        color: $cNobel;
+        cursor: pointer;
+
+        @include hover {
+            color: $cRed;
+        }
+
+        @media #{$mMoreSm} {
+            display: none;
+        }
+
+        svg {
+            fill: currentColor;
+        }
+    }
+}

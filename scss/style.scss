@@ -1,0 +1,38 @@
+@import "vars";
+@import "vars-css";
+@import "mixins";
+@import "functions";
+
+@import "fonts.scss";
+@import "svg-symbols.scss";
+@import "common.scss";
+@import "text-content.scss";
+
+@import "ui/buttons/button";
+@import "ui/buttons/social";
+@import "ui/buttons/to-top-btn";
+@import "ui/list";
+@import "ui/form";
+@import "ui/section-detect";
+
+@import "partials/common/write-to-us";
+@import "partials/common/contacts";
+
+@import "partials/header";
+@import "partials/common/promo";
+
+@import "partials/main/promo";
+@import "partials/main/about";
+@import "partials/main/products";
+@import "partials/main/delimeter";
+@import "partials/main/socials";
+@import "partials/main/contacts";
+
+@import "partials/footer";
+
+@import "pages/main";
+@import "pages/products";
+@import "pages/product";
+@import "pages/about";
+@import "pages/contacts";
+

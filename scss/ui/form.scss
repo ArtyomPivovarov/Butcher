@@ -1,0 +1,69 @@
+@import "../vars";
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 22px;
+
+    @media #{$mSm} {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__input {
+        flex: 0 0 100%;
+        background-color: $cNobel;
+        border: none;
+        border-radius: calc-rem(6);
+        padding: 1.5em 1.7em 1.2em;
+        font-size: 1rem;
+        color: $cGainsboro;
+
+        @media #{$mSm} {
+            padding: 1.1em 1.7em 0.9em;
+            border-radius: 10px;
+            color: $cNero;
+        }
+
+        &::placeholder {
+            font-size: inherit;
+            color: currentColor;
+        }
+
+        &--half {
+            flex: 0 0 calc(50% - 11px);
+
+            @media #{$mSm} {
+                width: 100%;
+                flex-shrink: 0;
+            }
+        }
+
+        &--textarea {
+            padding-top: 2.1em;
+            padding-bottom: 2.1em;
+            height: 168px;
+            font-family: inherit;
+            resize: none;
+
+            @media #{$mSm} {
+                min-height: 131px;
+                padding: 1.1em 1.7em 0.9em;
+            }
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 66px;
+
+        @media #{$mSm} {
+            height: 44px;
+            margin-top: 13px;
+        }
+    }
+
+    &__logo {
+
+    }
+}

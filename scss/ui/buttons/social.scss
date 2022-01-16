@@ -1,0 +1,51 @@
+@import '../../vars';
+
+.social-btn-wrap {
+    @include transit(color);
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    text-decoration: none;
+    color: currentColor;
+
+    @include hover {
+        color: $cRed;
+    }
+
+    & &__btn {
+        margin-right: calc-rem(15);
+        width: 67px;
+        height: 67px;
+        color: currentColor;
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: calc-rem(20);
+        line-height: 1;
+        color: currentColor;
+    }
+}
+
+.social-btn {
+    @include transit('border-color, color');
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    text-decoration: none;
+    color: currentColor;
+
+    @include hover {
+        color: $cRed;
+    }
+
+    svg {
+        max-width: 30%;
+        max-height: 30%;
+        fill: currentColor;
+    }
+}

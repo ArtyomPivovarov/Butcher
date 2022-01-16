@@ -1,0 +1,107 @@
+@import '../../vars';
+
+.to-top-btn {
+    @include transit('color, opacity');
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    top: 328px;
+    right: 0;
+    width: 48px;
+    height: 192px;
+    padding: 25px 0 25px 9px;
+    background: transparent;
+    border: none;
+    font-family: $fRoboto;
+    font-size: 19px;
+    line-height: 1;
+    font-weight: $fBold;
+    text-transform: uppercase;
+    color: $cWhite;
+    z-index: 10;
+    cursor: pointer;
+
+    @include hover {
+        color: $cNero;
+
+        .to-top-btn__arrow {
+            fill: $cNero;
+        }
+    }
+
+    @media #{$mSm} {
+        display: none;
+    }
+
+    &--hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__arrow {
+        @include transit(fill);
+        width: 22px;
+        height: 19px;
+        fill: currentColor;
+
+        & + & {
+            margin-top: -4px;
+        }
+    }
+
+    &__text {
+        margin-top: 21px;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+    }
+
+    &__border {
+        @include transit(fill);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        fill: $cWhite;
+    }
+
+    &--red-white {
+        .to-top-btn__border {
+            fill: $cRed;
+        }
+
+        @include hover {
+            color: $cRed;
+
+            .to-top-btn__border {
+                fill: $cRed;
+            }
+
+            .to-top-btn__arrow {
+                fill: $cRed;
+            }
+        }
+    }
+
+    &--red-grey {
+        color: $cDimGray;
+
+        .to-top-btn__border {
+            fill: $cRed;
+        }
+
+        @include hover {
+            color: $cRed;
+
+            .to-top-btn__border {
+                fill: $cDimGray;
+            }
+
+            .to-top-btn__arrow {
+                fill: $cRed;
+            }
+        }
+    }
+}

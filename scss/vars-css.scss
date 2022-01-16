@@ -1,0 +1,13 @@
+@import "vars";
+
+:root {
+    --rem: 16;
+    --gContent: 60px;
+    --wContent: calc(1410px + 2 * var(--gContent));
+    --wContentBig: calc(1710px + 2 * var(--gContent));
+    --hHeaderNav: 135px;
+
+    @media #{$mSm} {
+        --gContent: 20px;
+    }
+}

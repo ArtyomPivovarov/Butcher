@@ -1,0 +1,15 @@
+@import '../vars';
+
+.main-page {
+    .footer {
+        &:before {
+            display: none;
+        }
+
+        &__nav {
+            @media #{$mSm} {
+                display: none;
+            }
+        }
+    }
+}

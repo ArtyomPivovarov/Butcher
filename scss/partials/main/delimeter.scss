@@ -1,0 +1,14 @@
+@import "../../vars";
+
+.main-delimeter {
+    position: relative;
+    height: 660px;
+    margin-top: -313px;
+    z-index: 1;
+    background: center/cover no-repeat url("../pictures/main/delimeter.png");
+    pointer-events: none;
+
+    @media #{$mSm} {
+        display: none;
+    }
+}

@@ -1,0 +1,111 @@
+@import "../vars";
+
+.footer {
+    position: relative;
+    padding: calc-rem(48) 0 calc-rem(44);
+    background-color: $cEclipse;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 7px;
+        border-radius: 3px;
+        background-color: $cWhite;
+
+        @media #{$mMoreSm} {
+            display: none;
+        }
+    }
+
+    @media #{$mSm} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -95px;
+        left: 4.5%;
+        width: 270px;
+        height: 313px;
+        background: center/contain no-repeat url("../images/footer-label.svg");
+
+        @media (max-width: 1600px) {
+            left: 0;
+            transform: translateX(-60%);
+        }
+
+        @media #{$mLg} {
+            top: -88px;
+            height: 291px;;
+        }
+
+        @media #{$mMd} {
+            display: none;
+        }
+    }
+
+    &__container {
+        max-width: 1190px;
+    }
+
+    &__inner {
+        max-width: 1000px;
+        margin-left: auto;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: calc-rem(34);
+        border-bottom: calc-rem(4) solid rgb($cWhite, .22);
+
+        @media #{$mSm} {
+            flex-direction: column;
+            align-items: center;
+            gap: 44px;
+            padding-bottom: 100px;
+            padding-top: 68px;
+            border-bottom: none;
+        }
+    }
+
+    &__link {
+        @include transit(color);
+        text-decoration: none;
+        color: $cWhite;
+        font-size: calc-rem(20);
+        line-height: 1;
+
+        @include hover {
+            color: $cRed;
+        }
+
+        @media #{$mSm} {
+            font-size: 25px;
+        }
+    }
+
+    &__copyright {
+        padding-top: calc-rem(55);
+        text-align: center;
+        font-size: calc-rem(20);
+
+        @media #{$mSm} {
+            padding: 4px;
+            font-size: 10px;
+            background: $cRed;
+            width: calc(100% + 2 * var(--gContent));
+            margin-left: calc(-1 * var(--gContent));
+        }
+    }
+}
