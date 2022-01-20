@@ -1,4 +1,4 @@
-<?
+<?php
 /** @noinspection PhpUnused */
 define('P_DR', realpath(__DIR__ . '/../'));
 define("P_LOCAL", "/");

@@ -2,6 +2,8 @@
 /* @var string $pageClass */
 /* @var string $title */
 
+error_reporting(0);
+
 require_once 'helper.php';
 
 ?>

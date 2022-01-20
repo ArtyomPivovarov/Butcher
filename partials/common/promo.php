@@ -3,9 +3,7 @@
 ?>
 
 <section class="promo">
-    <?php if ($title) { ?>
-        <h1 class="promo__title">
-            <?= $title ?>
-        </h1>
-    <? } ?>
+    <?php if (isset($title)) {
+        echo '<h1 class="promo__title">' . $title . '</h1>';
+    } ?>
 </section>

@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "jquery": "^3.6.0",
+    "smoothscroll-polyfill": "^0.4.4",
     "ymaps": "^0.2.1"
   }
 }
