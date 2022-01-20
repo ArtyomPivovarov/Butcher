@@ -16,10 +16,14 @@ class BasePage {
 
             const href = $(e.target).attr('href');
             const elSelector = href.replace('/', '');
+            const element = document.querySelector(elSelector);
 
-            $(elSelector)[0].scrollIntoView({
-                behavior: "smooth",
-            });
+            if (element) {
+                window.scrollTo({
+                    top: element.getBoundingClientRect().top + window.pageYOffset,
+                    behavior: "smooth"
+                });
+            }
 
             history.pushState(null, null, elSelector);
         });
