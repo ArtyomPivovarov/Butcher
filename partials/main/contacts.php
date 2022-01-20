@@ -9,10 +9,10 @@
                 Санкт-Петербург
             </div>
             <div class="main-contacts__item">
-                <a href="tel:89819364536">8(981)-936-45-36</a>
+                <a href="tel:79516673314">8(951)-667-33-14</a>
             </div>
             <div class="main-contacts__item">
-                <a href="mailto:miskagon@gmail.com">Miskagon@gmail.com</a>
+                <a href="mailto:JohnnyTheButcher@yandex.ru">JohnnyTheButcher@yandex.ru</a>
             </div>
         </div>
 

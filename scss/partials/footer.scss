@@ -66,7 +66,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: calc-rem(34);
         border-bottom: calc-rem(4) solid rgb($cWhite, .22);
 
         @media #{$mSm} {
@@ -79,19 +78,53 @@
         }
     }
 
-    &__link {
+    &__item {
         @include transit(color);
-        text-decoration: none;
-        color: $cWhite;
+        position: relative;
+        padding-bottom: calc-rem(34);
+        z-index: 10;
         font-size: calc-rem(20);
         line-height: 1;
+        cursor: default;
 
-        @include hover {
-            color: $cRed;
+        @media #{$mSm} {
+            padding-bottom: 0;
         }
 
         @media #{$mSm} {
             font-size: 25px;
+        }
+
+        &:hover {
+            color: $cRed;
+
+            .dropdown {
+                opacity: 1;
+                pointer-events: all;
+            }
+        };
+    }
+
+    &__dropdown {
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        width: 290px;
+
+        @media #{$mSm} {
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
+    &__link {
+        @include transit(color);
+        text-decoration: none;
+        color: $cWhite;
+        cursor: pointer;
+
+        @include hover {
+            color: $cRed;
         }
     }
 

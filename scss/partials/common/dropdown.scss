@@ -1,0 +1,83 @@
+@import "../../vars";
+
+.dropdown {
+    @include transit(opacity);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $cWhiteSmoke;
+    padding: 1.6em 1.55em 2em;
+    border-radius: 20px;
+    font-family: $fRoboto;
+    font-size: calc-rem(24);
+    line-height: 1;
+    color: $cDarkGrey;
+    box-shadow: 0 4px 20px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+
+    @media #{$mSm} {
+        &--header {
+            top: 0;
+            left: 0;
+            padding: 131px 78px 110px 93px;
+            width: 100%;
+            min-height: max(100vh, 812px);
+            background-color: $cNero;
+            opacity: 0;
+            pointer-events: none;
+            border-radius: 0;
+            box-shadow: none;
+            color: $cWhite;
+        }
+    }
+
+    @include hover {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__title {
+        margin-bottom: 1.4em;
+
+        @media #{$mSm} {
+            margin-bottom: 1.2em;
+            font-size: 24px;
+        }
+    }
+
+    &__item {
+        @include transit(color);
+        position: relative;
+        padding-left: 1em;
+        text-decoration: none;
+        color: currentColor;
+
+        @media #{$mSm} {
+            font-size: 24px;
+        }
+
+        @include hover {
+            color: $cRed;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1em;
+
+            @media #{$mSm} {
+                margin-bottom: 1.9em;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: .3em;
+            width: .45em;
+            height: .45em;
+            border-radius: 50%;
+            background-color: $cRed;
+        }
+    }
+}

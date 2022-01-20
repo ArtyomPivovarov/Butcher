@@ -22,13 +22,17 @@
         </div>
 
         <div class="main-promo__socials">
-            <a class="social-btn main-promo__social-btn" href="javascript:void(0)" aria-label="facebook" target="_blank">
+            <a class="social-btn main-promo__social-btn"
+               href="https://www.facebook.com/people/Johnny-Butcher/100077011076690/"
+               aria-label="facebook" target="_blank">
                 <?= getSymbol('fb') ?>
             </a>
-            <a class="social-btn main-promo__social-btn" href="javascript:void(0)" aria-label="vkontakte" target="_blank">
+            <a class="social-btn main-promo__social-btn"
+               href="https://vk.com/johnnythebutcher?from=quick_search" aria-label="vkontakte" target="_blank">
                 <?= getSymbol('vk') ?>
             </a>
-            <a class="social-btn main-promo__social-btn" href="https://www.instagram.com/johnnythebutcher2020/" aria-label="instagram" target="_blank">
+            <a class="social-btn main-promo__social-btn"
+               href="https://www.instagram.com/johnnythebutcher2020/" aria-label="instagram" target="_blank">
                 <?= getSymbol('instagram') ?>
             </a>
         </div>

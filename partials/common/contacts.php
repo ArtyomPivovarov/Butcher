@@ -1,18 +1,20 @@
 <div class="contacts">
     <div class="contacts__socials">
         <a class="social-btn-wrap contacts__social-btn"
-           href="javascript:void(0)" aria-label="facebook" target="_blank">
-                    <span class="social-btn social-btn-wrap__btn">
-                        <?= getSymbol('fb') ?>
-                    </span>
+           href="https://www.facebook.com/people/Johnny-Butcher/100077011076690/"
+           aria-label="facebook" target="_blank">
+                <span class="social-btn social-btn-wrap__btn">
+                    <?= getSymbol('fb') ?>
+                </span>
 
             <span class="social-btn-wrap__text">Facebook</span>
         </a>
         <a class="social-btn-wrap contacts__social-btn"
-           href="javascript:void(0)" aria-label="vkontakte" target="_blank">
-                    <span class="social-btn social-btn-wrap__btn">
-                        <?= getSymbol('vk') ?>
-                    </span>
+           href="https://vk.com/johnnythebutcher?from=quick_search"
+           aria-label="vkontakte" target="_blank">
+                <span class="social-btn social-btn-wrap__btn">
+                    <?= getSymbol('vk') ?>
+                </span>
 
             <span class="social-btn-wrap__text">Vkontakte</span>
         </a>

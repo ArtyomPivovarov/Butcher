@@ -39,8 +39,8 @@ require('partials/header.php'); ?>
                         <span>Тел: 8(904)-519-34-66</span>
                     </a>
 
-                    <a class="contacts-page__addresses-link" href="mailto:johnytheButcher@yandex.ru">
-                        <span>johnytheButcher@yandex.ru</span>
+                    <a class="contacts-page__addresses-link" href="mailto:JohnnyTheButcher@yandex.ru">
+                        <span>JohnnyTheButcher@yandex.ru</span>
                     </a>
                 </div>
             </div>

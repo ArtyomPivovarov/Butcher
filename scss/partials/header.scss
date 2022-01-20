@@ -68,6 +68,10 @@
             height: 1.5px;
             width: 40%;
             background-color: rgba(255, 255, 255, .2);
+
+            @media #{$mSm} {
+                display: none;
+            }
         }
 
         &:before {
@@ -88,11 +92,13 @@
         }
 
         &-item {
+            @include transit(color);
             position: relative;
             display: inline-flex;
             justify-content: center;
             align-items: center;
             padding: 0 3%;
+            color: $cWhite;
 
             @media #{$mLg} {
                 padding: 0 2%;
@@ -106,7 +112,9 @@
 
             @media #{$mMoreSm} {
                 &:hover {
-                    .header__dropdown {
+                    color: $cRed;
+
+                    .dropdown {
                         opacity: 1;
                         pointer-events: all;
                     }
@@ -119,7 +127,6 @@
             font-size: 1rem;
             line-height: calc(24 / 16);
             font-weight: $fBold;
-            color: $cWhite;
             cursor: default;
 
             @media #{$mSm} {
@@ -134,97 +141,20 @@
             text-decoration: none;
             border-bottom: 2px solid transparent;
             cursor: pointer;
+            color: currentColor;
 
             @include hover {
                 color: $cRed;
                 border-bottom-color: $cRed;
             }
         }
-
     }
 
     &__dropdown {
-        @include transit(opacity);
         position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         right: 0;
         top: 100%;
         width: 290px;
-        background-color: $cWhiteSmoke;
-        padding: 1.6em 1.55em 2em;
-        border-radius: 20px;
-        font-family: $fRoboto;
-        font-size: calc-rem(24);
-        line-height: 1;
-        color: $cDarkGrey;
-        box-shadow: 0 4px 20px 16px rgba(0, 0, 0, 0.25);
-        opacity: 0;
-        pointer-events: none;
-
-        @media #{$mSm} {
-            top: 0;
-            left: 0;
-            padding: 131px 78px 110px 93px;
-            width: 100%;
-            min-height: max(100vh, 812px);
-            background-color: $cNero;
-            opacity: 0;
-            pointer-events: none;
-            border-radius: 0;
-            box-shadow: none;
-            color: $cWhite;
-        }
-
-        @include hover {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        &-title {
-            margin-bottom: 1.4em;
-
-            @media #{$mSm} {
-                margin-bottom: 1.2em;
-                font-size: 24px;
-            }
-        }
-
-        &-item {
-            @include transit(color);
-            position: relative;
-            padding-left: 1em;
-            text-decoration: none;
-            color: currentColor;
-
-            @media #{$mSm} {
-                font-size: 24px;
-            }
-
-            @include hover {
-                color: $cRed;
-            }
-
-            &:not(:last-child) {
-                margin-bottom: 1em;
-
-                @media #{$mSm} {
-                    margin-bottom: 1.9em;
-                }
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: .3em;
-                width: .45em;
-                height: .45em;
-                border-radius: 50%;
-                background-color: $cRed;
-            }
-        }
     }
 
     &__logo {

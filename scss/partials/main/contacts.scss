@@ -56,7 +56,7 @@
         min-height: calc-rem(83);
         padding: 0.7em 0.5em;
         border-radius: 5px;
-        font-size: calc-rem(30);
+        font-size: calc-rem(20);
         font-weight: $fLight;
         z-index: 1;
 
@@ -99,6 +99,9 @@
 
         a {
             @include transit(text-decoration-color);
+            display: inline-block;
+            max-width: 100%;
+            word-break: break-word;
             color: currentColor;
             text-decoration-color: transparent;
 

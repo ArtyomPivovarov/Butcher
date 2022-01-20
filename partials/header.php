@@ -1,4 +1,4 @@
-<?
+<?php
 /* @var string $pageClass */
 /* @var string $title */
 
@@ -15,7 +15,7 @@ require_once 'helper.php';
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
     <meta name="description" content="<?= htmlspecialchars($title) ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?
+    <?php
     // Автоматический прелоад шрифтов
     $fontsPath = 'fonts';
     if ($dirh = opendir(P_LOCAL_PATH . $fontsPath)) {
@@ -23,7 +23,7 @@ require_once 'helper.php';
             if (in_array($file, ['.', '..'])) continue;
             if (!preg_match('/.*\.woff2$/i', $file)) continue;
 
-            ?><link rel="preload" href="<?= $fontsPath ?>/<?= $file ?>" as="font" crossorigin="anonymous"><?
+            ?><link rel="preload" href="<?= $fontsPath ?>/<?= $file ?>" as="font" crossorigin="anonymous"><?php
         }
     }
     ?>
@@ -32,4 +32,4 @@ require_once 'helper.php';
     <link rel="stylesheet" href="dist/style.css?v=<?= filemtime('dist/style.css') ?>">
 </head>
 <body class="<?= $pageClass ?>-page">
-    <? render('header-content') ?>
+<?php render('header-content') ?>

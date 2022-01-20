@@ -22,21 +22,21 @@
             </div>
             <div class="header__nav-item">
                 <span class="header__nav-text js-header-dropdown-opener">Где купить</span>
-                <div class="header__dropdown">
-                    <div class="header__dropdown-title">
+                <div class="header__dropdown dropdown dropdown--header">
+                    <div class="dropdown__title">
                         В магазинах сети:
                     </div>
 
-                    <a class="header__dropdown-item" href="https://av.ru/" target="_blank">
+                    <a class="dropdown__item" href="https://av.ru/" target="_blank">
                         Азбука вкуса
                     </a>
-                    <a class="header__dropdown-item" href="https://vkusvill.ru/" target="_blank">
+                    <a class="dropdown__item" href="https://vkusvill.ru/" target="_blank">
                         ВкусВилл
                     </a>
-                    <a class="header__dropdown-item" href="https://lenta.com/" target="_blank">
+                    <a class="dropdown__item" href="https://lenta.com/" target="_blank">
                         Лента
                     </a>
-                    <a class="header__dropdown-item" href="https://www.perekrestok.ru/"
+                    <a class="dropdown__item" href="https://www.perekrestok.ru/"
                        target="_blank">
                         Перекрёсток
                     </a>
